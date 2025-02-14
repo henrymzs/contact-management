@@ -6,6 +6,6 @@ class Contato:
         self.email = email
 
     def exibir_detalhes(self):
-        print(f"Nome {self.nome}")
-        print(f"Nome {self.telefone}")
-        print(f"Nome {self.email}")
+        print(f"Nome: {self.nome}")
+        print(f"Telefone: {self.telefone}")
+        print(f"Email: {self.email}")
