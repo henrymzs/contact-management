@@ -2,6 +2,14 @@
 
 Este é um projeto em **JAVA** que implementa um sistema de gerenciamento de contatos, utilizando os conceitos de **herança** e **polimorfismo**. Ele permite adicionar, remover, buscar e listar contatos pessoais e profissionais de forma eficiente, com uma estrutura bem organizada.
 
+Estou sempre em busca de aprimorar minhas habilidades, então qualquer feedback sobre o projeto, código, arquitetura ou boas práticas será muito bem-vindo! Se quiser contribuir com sugestões, você pode:
+
+- 📧 Me enviar um e-mail: henrykaua21@gmail.com
+- 🔗 Se conectar comigo no [LinkedIn](https://www.linkedin.com/in/henry-kaua/)
+- 🐛 Abrir uma [issue](https://github.com/henrymzs/contact-management/issues) aqui no repositório
+
+Toda ajuda é muito apreciada e me auxilia a crescer como desenvolvedor. 🚀
+
 ## Funcionalidades
 
 O sistema oferece as seguintes funcionalidades:
