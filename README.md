@@ -1,112 +1,138 @@
-# Sistema de Gerenciamento de Contatos
+# Contact Management System
 
-Este é um projeto em **JAVA** que implementa um sistema de gerenciamento de contatos, utilizando os conceitos de **herança** e **polimorfismo**. Ele permite adicionar, remover, buscar e listar contatos pessoais e profissionais de forma eficiente, com uma estrutura bem organizada.
+This project aims to implement a simple contact management system using Java, MySQL, and JDBC. The system allows users to add, search, list, and remove contacts from a MySQL database. It also enables filtered searches by name, phone number, or email.
 
-Estou sempre em busca de aprimorar minhas habilidades, então qualquer feedback sobre o projeto, código, arquitetura ou boas práticas será muito bem-vindo! Se quiser contribuir com sugestões, você pode:
+I am always looking to improve my skills, so any feedback on the project, code, architecture, or best practices is greatly appreciated! If you would like to contribute with suggestions, you can:
 
-- 📧 Me enviar um e-mail: henrykaua21@gmail.com
-- 🔗 Se conectar comigo no [LinkedIn](https://www.linkedin.com/in/henry-kaua/)
-- 🐛 Abrir uma [issue](https://github.com/henrymzs/contact-management/issues) aqui no repositório
+- 📧 Send me an email: henrykaua21@gmail.com
+- 🔗 Connect with me on [LinkedIn](https://www.linkedin.com/in/henry-kaua/)
+- 🐛 Open an [issue](https://github.com/henrymzs/contact-management/issues) in this repository
 
-Toda ajuda é muito apreciada e me auxilia a crescer como desenvolvedor. 🚀
+Any help is highly appreciated and will help me grow as a developer. 🚀
 
-## Funcionalidades
+## Features
 
-O sistema oferece as seguintes funcionalidades:
+The system offers the following features:
 
-- **Adicionar Contato**: Adiciona um contato pessoal ou profissional à lista.
-- **Remover Contato**: Remove um contato específico da lista pelo nome.
-- **Buscar Contato**: Permite buscar contatos por nome, telefone ou e-mail.
-- **Listar Contatos**: Exibe todos os contatos armazenados com seus detalhes.
+- **Add Contact**: Adds a personal or professional contact to the list.
+- **Remove Contact**: Removes a specific contact from the list by name.
+- **Search Contact**: Allows searching for contacts by name, phone number, or email.
+- **List Contacts**: Displays all stored contacts with their details.
 
-## Estrutura do Projeto
+## Project Structure
 
 ### Classes
 
-#### **1. Classe `Contacts`**
-- Classe base para os contatos, que contém os atributos comuns.
+#### **1. `Contacts` Class**
+- Base class for contacts, containing common attributes.
 
-  **Atributos**:
-    - `name`: Nome do contato.
-    - `telephone`: Telefone do contato.
-    - `email`: E-mail do contato.
+  **Attributes**:
+  - `name`: Contact's name.
+  - `telephone`: Contact's phone number.
+  - `email`: Contact's email.
 
-  **Métodos**:
-    - `showDetails()`: Exibe os detalhes básicos do contato.
+  **Methods**:
+  - `showDetails()`: Displays the basic details of the contact.
 
-#### **2. Classe `PersonalContact`**
-- Herda da classe `Contacts` e adiciona atributos específicos para contatos pessoais.
+#### **2. `PersonalContact` Class**
+- Inherits from the `Contacts` class and adds specific attributes for personal contacts.
 
-  **Atributos Adicionais**:
-    - `birthday`: Data de aniversário do contato.
-    - `address`: Endereço do contato.
+  **Additional Attributes**:
+  - `birthday`: Contact's birthday.
+  - `address`: Contact's address.
 
-  **Métodos**:
-    - `showDetails()`: Sobrescreve o método da classe base para incluir detalhes pessoais.
+  **Methods**:
+  - `showDetails()`: Overrides the base class method to include personal details.
 
-#### **3. Classe `ProfessionalContact`**
-- Herda da classe `Contato` e adiciona atributos específicos para contatos profissionais.
+#### **3. `ProfessionalContact` Class**
+- Inherits from the `Contacts` class and adds specific attributes for professional contacts.
 
-  **Atributos Adicionais**:
-    - `enterprise`: Nome da empresa.
-    - `jobPosition`: Cargo do contato na empresa.
+  **Additional Attributes**:
+  - `enterprise`: Company name.
+  - `jobPosition`: Contact's job position in the company.
 
-  **Métodos**:
-    - `showDetails()`: Sobrescreve o método da classe base para incluir detalhes profissionais.
+  **Methods**:
+  - `showDetails()`: Overrides the base class method to include professional details.
 
-#### **4. Classe `Agenda`**
-- Gerencia a lista de contatos e oferece métodos para manipulação dos dados.
+#### **4. `ContactDAO` Class**
+- Manages the contact list and provides methods for data manipulation.
 
-  **Atributos**:
-    - `contacts`: Lista de objetos de contato.
+  **Attributes**:
+  - `contacts`: List of contact objects.
 
-  **Métodos**:
-    - `addContacts(contact)`: Adiciona um contato à lista.
-    - `removeContacts(name)`: Remove um contato pelo nome.
-    - `searchContacts(searchTerm)`: Busca um contato por nome, telefone ou e-mail.
-    - `listContacts()`: Lista todos os contatos armazenados.
+  **Methods**:
+  - `addContacts(contact)`: Adds a contact to the list.
+  - `removeContacts(name)`: Removes a contact by name.
+  - `searchContacts(searchTerm)`: Searches for a contact by name, phone number, or email.
+  - `listContacts()`: Lists all stored contacts.
 
-#### **5. Arquivo `Main`**
-- Ponto de entrada do sistema que apresenta um menu interativo no console para o usuário.
+#### **5. `Main` File**
+- The system entry point that presents an interactive menu in the console for the user.
 
-## Exemplo de Uso
+## Usage Example
 
-Ao executar o programa, o menu interativo é exibido:
+When running the program, the interactive menu is displayed:
 
 ```bash
 --- MENU ---
-1. Adicionar contato pessoal: 
-2. Adicionar contato profissional:
-3. Remover contato:
-4. Buscar contato:
-5. Listar contatos:
-0. Sair
-Escolha uma opção: 1
-Nome: João
-Telefone: 12345678
-Email: joao@email.com
-Data de aniversário: 01/01/2000
-Endereço: Rua A
+1. Add personal contact:
+2. Add professional contact:
+3. Remove contact:
+4. Search contact:
+5. List contacts:
+0. Exit
+Choose an option: 1
+Name: John
+Phone number: 12345678
+Email: john@email.com
+Birthday: 01/01/2000
+Address: Street A
 ```
-- Exemplo de saída:
+- Example output:
 ```bash
-Contatos na agenda:
-Nome: João
-Telefone: 12345678
-Email: joao@email.com
-Data de Aniversário: 01/01/2000
-Endereço: Rua A
+Contacts in the address book:
+Name: John
+Phone number: 12345678
+Email: john@email.com
+Birthday: 01/01/2000
+Address: Street A
 -------------------
 ```
-## Como Clonar o Repositorio
 
-1. **Instalar Java**:
-    - Para instalar o Java no seu sistema, siga as instruções específicas para o seu sistema operacional.
+## Technologies Used
+- **Java**
+- **MySQL**
+- **MySQL Workbench** for table management
 
-2. **Clonar o repositório**:
-   Clone este repositório para a sua máquina local:
+## Database Configuration
+
+**Database Setup:**
+- In MySQL, create the database and the table to store contacts:
+    ```sql
+    CREATE DATABASE any_name;
+    USE created_name;
+
+    CREATE TABLE contacts (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100),
+        phone VARCHAR(20),
+        email VARCHAR(100),
+        contact_type VARCHAR(20),
+        birthday DATE,
+        address VARCHAR(255),
+        company VARCHAR(100),
+        job_position VARCHAR(100)
+    );
+    ```
+
+## How to Clone the Repository
+
+1. **Install Java**:
+  - To install Java on your system, follow the instructions specific to your operating system.
+
+2. **Clone the repository**:
+   Clone this repository to your local machine:
    ```bash
    git clone https://github.com/henrymzs/contact-management.git
    ```
-
 
