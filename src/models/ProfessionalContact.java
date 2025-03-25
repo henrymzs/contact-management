@@ -10,6 +10,14 @@ public class ProfessionalContact extends Contact{
         this.jobPosition = jobPosition;
     }
 
+    public String getEnterprise() {
+        return enterprise;
+    }
+
+    public String getJobPosition() {
+        return jobPosition;
+    }
+
     public void showDetails() {
         super.showDetails();
         System.out.println("Empresa: " + enterprise);

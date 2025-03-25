@@ -11,6 +11,14 @@ public class PersonalContact extends Contact{
         this.address = address;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
     public void showDetails() {
         super.showDetails();
         System.out.println("Data de Aniversário: " + birthday);
